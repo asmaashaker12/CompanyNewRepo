@@ -16,8 +16,6 @@ namespace Company.Data.Models
         [Required(ErrorMessage = "Mail  is Required")]
         [EmailAddress(ErrorMessage ="InValid Format for Email")]
         public string Email { get; set; }
-        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$",
-      ErrorMessage = "Password must be at least 6 characters long, and contain uppercase, lowercase, digit, and special character.")]
         public string Password { get; set; }
         [Required(ErrorMessage ="Confirm Password Required")]
         [Compare(nameof(Password),ErrorMessage ="Confirm Password Doenot Match")]
